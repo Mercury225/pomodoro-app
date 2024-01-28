@@ -1,0 +1,68 @@
+@import "templates.scss";
+
+/*fonts*/
+.heading-1-kumbh {
+  @include heading-1($font: $kumbh);
+}
+.heading-1-roboto {
+  @include heading-1($roboto);
+}
+.heading-1-space-mono {
+  @include heading-1($space-mono);
+}
+.heading-2-kumbh {
+  @include heading-2($font: $kumbh);
+}
+.heading-2-roboto {
+  @include heading-2($roboto);
+}
+.heading-2-space-mono {
+  @include heading-2($space-mono);
+}
+.heading-3-kumbh {
+  @include heading-3($font: $kumbh);
+}
+.heading-3-roboto {
+  @include heading-3($roboto);
+}
+.heading-3-space-mono {
+  @include heading-3($space-mono);
+}
+.heading-4-kumbh {
+  @include heading-4($font: $kumbh);
+}
+.heading-4-roboto {
+  @include heading-4($roboto);
+}
+.heading-4-space-mono {
+  @include heading-4($space-mono);
+}
+.body-1-kumbh {
+  @include body-1($font: $kumbh);
+}
+.body-1-roboto {
+  @include body-1($roboto);
+}
+.body-1-space-mono {
+  @include body-1($space-mono);
+}
+.body-2-kumbh {
+  @include body-2($font: $kumbh);
+}
+.body-2-roboto {
+  @include body-2($roboto);
+}
+.body-2-space-mono {
+  @include body-2($space-mono);
+}
+
+/*colors */
+.red {
+  background: $red;
+}
+.blue {
+  background: $blue;
+}
+.purple {
+  background: $purple;
+}

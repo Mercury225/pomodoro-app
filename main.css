@@ -1,0 +1,153 @@
+/* all the variables for this project*/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@700&family=Space+Mono:wght@700&display=swap");
+/* red option*/
+/* blue option*/
+/* purple option*/
+/* other colors */
+/*fonts */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/*fonts*/
+.heading-1-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 6.25rem;
+  line-height: 7.5rem;
+  letter-spacing: -0.3125rem;
+}
+
+.heading-1-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 6.25rem;
+  line-height: 7.5rem;
+  letter-spacing: -0.3125rem;
+}
+
+.heading-1-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 6.25rem;
+  line-height: 7.5rem;
+  letter-spacing: -0.3125rem;
+}
+
+.heading-2-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+
+.heading-2-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+
+.heading-2-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+}
+
+.heading-3-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.9375rem;
+  text-transform: uppercase;
+}
+
+.heading-3-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.9375rem;
+  text-transform: uppercase;
+}
+
+.heading-3-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.9375rem;
+  text-transform: uppercase;
+}
+
+.heading-4-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.heading-4-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.heading-4-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+}
+
+.body-1-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+.body-1-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+.body-1-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+.body-2-kumbh {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.body-2-roboto {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+.body-2-space-mono {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+}
+
+/*colors */
+.red {
+  background: rgb(248, 112, 112);
+}
+
+.blue {
+  background: rgb(112, 243, 248);
+}
+
+.purple {
+  background: rgb(216, 129, 248);
+}
+
+/*# sourceMappingURL=main.css.map */
