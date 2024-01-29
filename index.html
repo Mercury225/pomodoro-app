@@ -1,32 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Pomodoro app</title>
-</head>
-<body>
-  pomodoro
-  short break
-  long break
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Frontend Mentor | Pomodoro app</title>
+  </head>
+  <body>
+    <header>pomodoro</header>
+    <nav class="navigationpanel">
+      <button class="pomodoro">pomodoro</button
+      ><button class="shortbreak">short break</button
+      ><button class="longbreak">long break</button>
+    </nav>
 
-  start 
-  pause
-  restart
+    <section class="timer">
+      <div class="bigcircle">
+        <div class="smallercircle">
+          <canvas id="timerRing" width="1000" height="1000"></canvas>
+          <h2 id="time">time left</h2>
+          <button id="startbutton">start</button>
+          <button id="pausebutton">pause</button>
+          <button id="resumebutton">resume</button>
+          <button id="restartbutton">restart</button>
+        </div>
+      </div>
+    </section>
+    <svg
+      class="settings"
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="28"
+    >
+      <path
+        fill="#D7E0FF"
+        d="M26.965 17.682l-2.927-2.317c.055-.448.097-.903.097-1.365 0-.462-.042-.917-.097-1.365l2.934-2.317a.702.702 0 00.167-.896l-2.775-4.851a.683.683 0 00-.847-.301l-3.454 1.407a10.506 10.506 0 00-2.345-1.379l-.52-3.71A.716.716 0 0016.503 0h-5.55a.703.703 0 00-.687.588l-.52 3.71c-.847.357-1.63.819-2.345 1.379L3.947 4.27a.691.691 0 00-.847.301L.325 9.422a.705.705 0 00.167.896l2.927 2.317c-.055.448-.097.903-.097 1.365 0 .462.042.917.097 1.365L.492 17.682a.702.702 0 00-.167.896L3.1 23.429a.683.683 0 00.847.301L7.4 22.323a10.506 10.506 0 002.345 1.379l.52 3.71c.056.329.34.588.687.588h5.55a.703.703 0 00.687-.588l.52-3.71c.847-.357 1.631-.819 2.346-1.379l3.454 1.407c.313.119.673 0 .847-.301l2.775-4.851a.705.705 0 00-.167-.896zM13.73 18.9c-2.685 0-4.857-2.191-4.857-4.9 0-2.709 2.172-4.9 4.857-4.9 2.684 0 4.856 2.191 4.856 4.9 0 2.71-2.172 4.9-4.856 4.9z"
+        opacity=".5"
+      />
+    </svg>
+    <div class="settingpanel">
+      <section class="settingheader">
+        <h2 class="settingstitle">Settings</h2>
+        <img src="./assets/icon-close.svg" alt="close button" />
+      </section>
+      <section class="settime">
+        <h3 class="timeminutes">Time (minutes)</h3>
+        <div class="selectors">
+          <div class="pomodoroselector">
+            <h4>pomodoro</h4>
+            <input type="number" step="1" min="25" max="30" />
+          </div>
+          <div class="shortbreakselector">
+            <h4>Short Break</h4>
+            <input type="number" step="1" min="1" max="5" />
+          </div>
+          <div class="longbreakselector">
+            <h4>Long</h4>
+            <input type="number" step="1" min="5" max="15" />
+          </div>
+        </div>
+      </section>
 
-  Settings
-
-  Time (minutes)
-  pomodoro
-  short break
-  long break
-
-  Font
-  Color
-
-  Apply
-</body>
+      <section class="font">
+        <h3>Font</h3>
+        <div class="fontbuttons">
+          <label for="kumbhbutton"
+            ><input type="checkbox" id="kumbhbutton" />
+            <span class="checkmark">Aa</span></label
+          >
+          <label for="robotobutton"
+            ><input type="checkbox" id="robotobutton" />
+            <span class="checkmark">Aa</span></label
+          >
+          <label for="monobutton"
+            ><input type="checkbox" id="monobutton" />
+            <span class="checkmark">Aa</span></label
+          >
+        </div>
+      </section>
+      <section class="color">
+        <h3>Color</h3>
+        <div class="colorbuttons">
+          <label for="redbutton"
+            ><input type="checkbox" id="redbutton" />
+            <span class="checkmark"></span
+          ></label>
+          <label for="bluebutton"
+            ><input type="checkbox" id="bluebutton" />
+            <span class="checkmark"></span
+          ></label>
+          <label for="button"
+            ><input type="checkbox" id="button" />
+            <span class="checkmark"></span
+          ></label>
+        </div>
+      </section>
+      <button class="apply">Apply</button>
+    </div>
+    <script src="./timerRing.js"></script>
+  </body>
 </html>

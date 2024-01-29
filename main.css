@@ -13,6 +13,27 @@ body {
   font-size: 16px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: inherit;
+  height: inherit;
+}
+
+#timerRing {
+  height: 320px;
+  width: 320px;
+}
+
 /*fonts*/
 .heading-1-kumbh {
   font-family: "Kumbh Sans", sans-serif;
