@@ -32,9 +32,8 @@ body {
 
 @mixin heading-1($font) {
   font-family: $font;
-  font-size: 6.25rem;
+  font-size: 5rem;
   line-height: 7.5rem;
-  letter-spacing: -0.3125rem;
 }
 @mixin heading-2($font) {
   font-family: $font;

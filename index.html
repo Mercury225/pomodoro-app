@@ -14,18 +14,18 @@
     <title>Frontend Mentor | Pomodoro app</title>
   </head>
   <body>
-    <header>pomodoro</header>
+    <header class="heading-2-kumbh title">pomodoro</header>
     <nav class="navigationpanel">
-      <button class="pomodoro">pomodoro</button
-      ><button class="shortbreak">short break</button
-      ><button class="longbreak">long break</button>
+      <button class="pomodoro body-1-kumbh selected">pomodoro</button
+      ><button class="shortbreak body-1-kumbh">short break</button
+      ><button class="longbreak body-1-kumbh">long break</button>
     </nav>
 
     <section class="timer">
       <div class="bigcircle">
+        <canvas id="timerRing" width="1000" height="1000"></canvas>
         <div class="smallercircle">
-          <canvas id="timerRing" width="1000" height="1000"></canvas>
-          <h2 id="time">time left</h2>
+          <h2 id="time" class="heading-1-kumbh">time left</h2>
           <button id="startbutton">start</button>
           <button id="pausebutton">pause</button>
           <button id="resumebutton">resume</button>
@@ -45,7 +45,7 @@
         opacity=".5"
       />
     </svg>
-    <div class="settingpanel">
+    <!-- <div class="settingpanel">
       <section class="settingheader">
         <h2 class="settingstitle">Settings</h2>
         <img src="./assets/icon-close.svg" alt="close button" />
@@ -103,7 +103,7 @@
         </div>
       </section>
       <button class="apply">Apply</button>
-    </div>
+    </div> -->
     <script src="./timerRing.js"></script>
   </body>
 </html>

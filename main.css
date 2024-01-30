@@ -27,33 +27,118 @@ html {
 body {
   width: inherit;
   height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+:root {
+  background: rgb(30, 33, 63);
+}
+
+/*pomodoro title */
+.title {
+  color: #eff1fa;
+}
+
+/* navigational bar */
+.navigationpanel {
+  background: rgb(22, 25, 50);
+  padding: 0.6rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+}
+.navigationpanel > button {
+  color: #d7e0ff;
+  padding: 0.6rem 1rem;
+  background: inherit;
+  border: 0.1rem solid rgb(22, 25, 50);
+  border-radius: 2rem;
+  margin-right: 0.2rem;
+}
+.navigationpanel > button.selected {
+  /*highlighted red */
+  color: rgb(22, 25, 50);
+  background-color: rgb(248, 112, 112);
+  border-radius: 2rem;
+}
+.navigationpanel > button.selected:hover {
+  color: rgb(22, 25, 50);
+  background-color: rgb(248, 112, 112);
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(22, 25, 50);
+}
+.navigationpanel > button:hover {
+  border: 0.1rem solid #eff1fa;
+  color: #eff1fa;
+  background: rgb(30, 33, 63);
+  cursor: pointer;
+}
+.navigationpanel > button:last-of-type {
+  margin-right: 0rem;
+}
+
+/* blue circles in the middle with shade */
+.bigcircle {
+  position: relative;
+  width: 21rem;
+  height: 21rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  box-shadow: -0.8rem -0.8rem 2.4rem 0.02rem rgba(215, 224, 255, 0.1921568627);
+  background: linear-gradient(to top left, rgba(215, 224, 255, 0.1215686275), rgb(22, 25, 50) 70%);
+  border-radius: 50%;
+}
+
+.smallercircle {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  background: rgb(22, 25, 50);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* inside the smaller circle */
 #timerRing {
+  position: absolute;
+  z-index: 1;
   height: 320px;
   width: 320px;
+}
+
+#time {
+  position: absolute;
+  z-index: 2;
+  width: 13rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eff1fa;
 }
 
 /*fonts*/
 .heading-1-kumbh {
   font-family: "Kumbh Sans", sans-serif;
-  font-size: 6.25rem;
+  font-size: 5rem;
   line-height: 7.5rem;
-  letter-spacing: -0.3125rem;
 }
 
 .heading-1-roboto {
   font-family: "Roboto Slab", serif;
-  font-size: 6.25rem;
+  font-size: 5rem;
   line-height: 7.5rem;
-  letter-spacing: -0.3125rem;
 }
 
 .heading-1-space-mono {
   font-family: "Space Mono", monospace;
-  font-size: 6.25rem;
+  font-size: 5rem;
   line-height: 7.5rem;
-  letter-spacing: -0.3125rem;
 }
 
 .heading-2-kumbh {

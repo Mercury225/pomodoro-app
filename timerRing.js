@@ -22,7 +22,7 @@ context.lineWidth = "30";
 context.lineCap = "round";
 
 /* set the duration of the timer here, conversion from minutes to seconds, with a counter (count) to count up in seconds starting at 0, Full circle circumference is 2 pi*/
-const timeInMinutes = 15;
+const timeInMinutes = 1;
 const timeInSeconds = timeInMinutes * 60;
 let count = 0;
 const fullCircle = 2 * Math.PI;
@@ -86,7 +86,7 @@ document.getElementById("resumebutton").addEventListener("click", () => {
 let timer = (count) => {
   let timeInterval = setInterval(function () {
     /* once it finishes, the interval stops */
-    if (count === timeInSeconds) {
+    if (count === timeInSeconds - 1) {
       clearInterval(timeInterval);
     }
     /* when the pause button is pressed, the count is stored and the interval stops until the resume is clicked*/

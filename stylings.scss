@@ -13,11 +13,100 @@ html {
 body {
   width: inherit;
   height: inherit;
+  @include flex-column;
+  @include flex-center;
+}
+:root {
+  background: $dark-blue;
 }
 
+/*pomodoro title */
+
+.title {
+  color: $offwhite;
+}
+
+/* navigational bar */
+.navigationpanel {
+  background: $darkest-blue;
+  padding: 0.6rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  > button {
+    &.selected {
+      /*highlighted red */
+      &:hover {
+        color: $darkest-blue;
+        background-color: $red;
+        border-radius: 2rem;
+        border: 0.1rem solid $darkest-blue;
+      }
+      color: $darkest-blue;
+
+      background-color: $red;
+      border-radius: 2rem;
+    }
+    color: $bluish-white;
+    padding: 0.6rem 1rem;
+    background: inherit;
+    border: 0.1rem solid $darkest-blue;
+    border-radius: 2rem;
+
+    margin-right: 0.2rem;
+
+    &:hover {
+      border: 0.1rem solid $offwhite;
+      color: $offwhite;
+      background: $dark-blue;
+      cursor: pointer;
+    }
+    &:last-of-type {
+      margin-right: 0rem;
+    }
+  }
+}
+
+/* blue circles in the middle with shade */
+.bigcircle {
+  position: relative;
+  width: 21rem;
+  height: 21rem;
+  display: flex;
+  @include flex-center;
+  margin: 2rem 0;
+  box-shadow: -0.8rem -0.8rem 2.4rem 0.02rem #d7e0ff31;
+  background: linear-gradient(to top left, #d7e0ff1f, $darkest-blue 70%);
+  border-radius: 50%;
+}
+
+.smallercircle {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  background: $darkest-blue;
+
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* inside the smaller circle */
 #timerRing {
+  position: absolute;
+  z-index: 1;
   height: 320px;
   width: 320px;
+}
+
+#time {
+  position: absolute;
+  z-index: 2;
+  width: 13rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $offwhite;
 }
 
 /*fonts*/
