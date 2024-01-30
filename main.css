@@ -88,7 +88,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
-  box-shadow: -0.8rem -0.8rem 2.4rem 0.02rem rgba(215, 224, 255, 0.1921568627);
+  box-shadow: -0.8rem -0.8rem 2rem 0.01rem rgba(215, 224, 255, 0.0823529412);
   background: linear-gradient(to top left, rgba(215, 224, 255, 0.1215686275), rgb(22, 25, 50) 70%);
   border-radius: 50%;
 }
@@ -98,6 +98,7 @@ body {
   width: 18rem;
   height: 18rem;
   background: rgb(22, 25, 50);
+  z-index: 1;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -107,7 +108,7 @@ body {
 /* inside the smaller circle */
 #timerRing {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   height: 320px;
   width: 320px;
 }
@@ -120,6 +121,37 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #eff1fa;
+}
+
+.buttonpanel {
+  position: absolute;
+  background: none;
+  z-index: 3;
+  top: 63%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  transform: translateX(-50%);
+}
+.buttonpanel button {
+  background: none;
+  color: #eff1fa;
+  border: 0.1rem solid rgb(22, 25, 50);
+  padding: 0.4rem;
+}
+.buttonpanel button:hover {
+  cursor: pointer;
+  border: 0.1rem solid #eff1fa;
+  border-radius: 2rem;
+}
+.buttonpanel #pausebutton {
+  display: none;
+}
+.buttonpanel #resumebutton {
+  display: none;
 }
 
 /*fonts*/
