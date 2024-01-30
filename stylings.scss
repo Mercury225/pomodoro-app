@@ -138,60 +138,114 @@ body {
   }
 }
 
+/* settings panel */
+
+.settings {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.settingpanel {
+  position: absolute;
+  background: $white;
+  border-radius: 2rem;
+  @include flex-column;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 4;
+  width: 30rem;
+  > section {
+    padding: 1rem 0;
+    border-bottom: 0.01rem solid #979797;
+  }
+}
+
+.selectors {
+  @include flex-row;
+  justify-content: center;
+  margin: 1.2rem 0;
+  > div {
+    padding: 0 0.5rem;
+    color: #1e213f;
+
+    h4 {
+      padding: 0.4rem 0;
+    }
+    .textbox-container {
+      @include flex-row;
+
+      background: $offwhite;
+      border-radius: 2rem;
+      padding: 0.2rem 0.9rem;
+      span {
+        width: 3rem;
+        height: 2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: 0.5rem;
+      }
+      .svgarrows {
+        @include flex-column;
+        justify-content: center;
+        svg {
+          &:hover path {
+            stroke: red;
+            cursor: pointer;
+          }
+          &:first-child {
+            margin-bottom: 0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.settingheader,
+.font,
+.color {
+  @include flex-row;
+  justify-content: space-between;
+}
+
+#close:hover {
+  cursor: pointer;
+}
 /*fonts*/
-.heading-1-kumbh {
-  @include heading-1($font: $kumbh);
+.kumbh {
+  font-family: $kumbh;
 }
-.heading-1-roboto {
-  @include heading-1($roboto);
+.roboto {
+  font-family: $roboto;
 }
-.heading-1-space-mono {
-  @include heading-1($space-mono);
+.space-mono {
+  font-family: $space-mono;
 }
-.heading-2-kumbh {
-  @include heading-2($font: $kumbh);
+.heading-1 {
+  @include heading-1;
 }
-.heading-2-roboto {
-  @include heading-2($roboto);
+.heading-2 {
+  @include heading-2;
 }
-.heading-2-space-mono {
-  @include heading-2($space-mono);
+
+.heading-3 {
+  @include heading-3;
 }
-.heading-3-kumbh {
-  @include heading-3($font: $kumbh);
+
+.heading-4 {
+  @include heading-4;
 }
-.heading-3-roboto {
-  @include heading-3($roboto);
+
+.body-1 {
+  @include body-1;
 }
-.heading-3-space-mono {
-  @include heading-3($space-mono);
-}
-.heading-4-kumbh {
-  @include heading-4($font: $kumbh);
-}
-.heading-4-roboto {
-  @include heading-4($roboto);
-}
-.heading-4-space-mono {
-  @include heading-4($space-mono);
-}
-.body-1-kumbh {
-  @include body-1($font: $kumbh);
-}
-.body-1-roboto {
-  @include body-1($roboto);
-}
-.body-1-space-mono {
-  @include body-1($space-mono);
-}
-.body-2-kumbh {
-  @include body-2($font: $kumbh);
-}
-.body-2-roboto {
-  @include body-2($roboto);
-}
-.body-2-space-mono {
-  @include body-2($space-mono);
+
+.body-2 {
+  @include body-2;
 }
 
 /*colors */

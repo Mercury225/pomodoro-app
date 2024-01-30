@@ -30,37 +30,38 @@ body {
   font-size: 16px;
 }
 
-@mixin heading-1($font) {
-  font-family: $font;
+@mixin heading-1 {
+  // font-family: $font;
   font-size: 5rem;
   line-height: 7.5rem;
 }
-@mixin heading-2($font) {
-  font-family: $font;
+@mixin heading-2 {
+  // font-family: $font;
   font-size: 1.75rem;
   line-height: 2.125rem;
 }
-@mixin heading-3($font) {
-  font-family: $font;
+@mixin heading-3 {
+  // font-family: $font;
   font-size: 1rem;
   line-height: 1.1875rem;
   letter-spacing: 0.9375rem;
   text-transform: uppercase;
 }
-@mixin heading-4($font) {
-  font-family: $font;
+@mixin heading-4 {
+  // font-family: $font;
   font-size: 0.8125rem;
   line-height: 1rem;
   letter-spacing: 0.3125rem;
   text-transform: uppercase;
 }
-@mixin body-1($font) {
-  font-family: $font;
+@mixin body-1 {
+  // font-family: $font;
   font-size: 0.875rem;
   line-height: 1.125rem;
+  font-weight: bold;
 }
-@mixin body-2($font) {
-  font-family: $font;
+@mixin body-2 {
+  // font-family: $font;
   font-size: 0.75rem;
   line-height: 0.875rem;
 }

@@ -13,24 +13,24 @@
     <link rel="stylesheet" href="main.css" />
     <title>Frontend Mentor | Pomodoro app</title>
   </head>
-  <body>
-    <header class="heading-2-kumbh title">pomodoro</header>
+  <body class="kumbh">
+    <header class="heading-2 title">pomodoro</header>
     <nav class="navigationpanel">
-      <button class="pomodoro body-1-kumbh selected">pomodoro</button
-      ><button class="shortbreak body-1-kumbh">short break</button
-      ><button class="longbreak body-1-kumbh">long break</button>
+      <button class="[ pomodoro body-1 ] selected">pomodoro</button
+      ><button class="shortbreak body-1">short break</button
+      ><button class="longbreak body-1">long break</button>
     </nav>
 
     <section class="timer">
       <div class="bigcircle">
         <canvas id="timerRing" width="1000" height="1000"></canvas>
         <div class="smallercircle">
-          <h2 id="time" class="heading-1-kumbh">00:00</h2>
+          <h2 id="time" class="heading-1">00:00</h2>
         </div>
         <div class="buttonpanel">
-          <button id="startbutton" class="heading-4-kumbh">start</button>
-          <button id="pausebutton" class="heading-4-kumbh">pause</button>
-          <button id="resumebutton" class="heading-4-kumbh">resume</button>
+          <button id="startbutton" class="heading-4">start</button>
+          <button id="pausebutton" class="heading-4">pause</button>
+          <button id="resumebutton" class="heading-4">resume</button>
         </div>
       </div>
     </section>
@@ -46,25 +46,128 @@
         opacity=".5"
       />
     </svg>
-    <!-- <div class="settingpanel">
+    <div class="settingpanel">
       <section class="settingheader">
-        <h2 class="settingstitle">Settings</h2>
-        <img src="./assets/icon-close.svg" alt="close button" />
+        <h2 class="settingstitle heading-2">Settings</h2>
+        <img
+          id="close"
+          src="./assets/icon-close.svg"
+          width="20"
+          height="20"
+          alt="close
+        button"
+        />
       </section>
       <section class="settime">
-        <h3 class="timeminutes">Time (minutes)</h3>
+        <h3 class="timeminutes heading-4">Time (minutes)</h3>
         <div class="selectors">
-          <div class="pomodoroselector">
+          <div class="pomodoroselector body-2">
             <h4>pomodoro</h4>
-            <input type="number" step="1" min="25" max="30" />
+            <div class="textbox-container">
+              <span id="pomodoro-textbox" class="textbox"> </span>
+              <div class="svgarrows">
+                <svg
+                  id="pomodoro-arrow-up"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 6l6-4 6 4"
+                  />
+                </svg>
+                <svg
+                  id="pomodoro-arrow-down"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 1l6 4 6-4"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="shortbreakselector">
-            <h4>Short Break</h4>
-            <input type="number" step="1" min="1" max="5" />
+          <div class="shortbreakselector body-2">
+            <h4>short break</h4>
+            <div class="textbox-container">
+              <span id="shortbreak-textbox" class="textbox"> </span>
+              <div class="svgarrows">
+                <svg
+                  id="shortbreak-arrow-up"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 6l6-4 6 4"
+                  />
+                </svg>
+                <svg
+                  id="shortbreak-arrow-down"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 1l6 4 6-4"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="longbreakselector">
-            <h4>Long</h4>
-            <input type="number" step="1" min="5" max="15" />
+          <div class="longbreakselector body-2">
+            <h4>long break</h4>
+            <div class="textbox-container">
+              <span id="longbreak-textbox" class="textbox"> </span>
+              <div class="svgarrows">
+                <svg
+                  id="longbreak-arrow-up"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 6l6-4 6 4"
+                  />
+                </svg>
+                <svg
+                  id="longbreak-arrow-down"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="7"
+                >
+                  <path
+                    fill="none"
+                    stroke="#1E213F"
+                    stroke-opacity=".25"
+                    stroke-width="2"
+                    d="M1 1l6 4 6-4"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -104,7 +207,8 @@
         </div>
       </section>
       <button class="apply">Apply</button>
-    </div> -->
-    <script src="./timerRing.js"></script>
+    </div>
+    <script type="module" src="./timerRing.js"></script>
+    <script type="module" src="./settings.js"></script>
   </body>
 </html>

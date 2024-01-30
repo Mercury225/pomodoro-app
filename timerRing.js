@@ -1,17 +1,9 @@
-/* establishing the canvas and context for 2d drawing tools */
-
-/* dimensions for the canvas and circle */
+import { times, colors } from "./settings.js";
 
 const dimensions = {
   width: 1000,
   height: 1000,
   radius: 500,
-};
-
-const colors = {
-  red: "rgb(248, 112, 112)",
-  blue: "rgb(112, 243, 248)",
-  purple: "rgb(216, 129, 248)",
 };
 
 /* here i am taking a percentage of the fullCircle calculated by the ratio between the number of seconds that have elasped and the total seconds for the timer */
@@ -27,7 +19,9 @@ const addRadiansToOrigin = (seconds) => {
 
 /* this function is placed into setInterval to re-render the canvas, it redraws the arc every second */
 const redrawCircle = (count) => {
-  /*asthetics of the circle */
+  //asthetics of the circle
+  // establishing the canvas and context for 2d drawing tools
+  // dimensions for the canvas and circle
   const canvas = document.getElementById("timerRing");
   const context = canvas.getContext("2d");
   context.strokeStyle = colors.red;
@@ -77,13 +71,6 @@ const timeDisplay = (seconds) => {
   return `${minutesClockDisplay()}:${secondssClockDisplay()}`;
 };
 
-/* navigation handler when switching options */
-const times = {
-  pomodoro: 25,
-  short_break: 5,
-  long_break: 15,
-};
-
 const pomodoroSelected = () => {
   return document
     .getElementsByClassName("selected")[0]
@@ -116,6 +103,7 @@ const timeInSeconds = () => {
   return timeInMinutes() * 60;
 };
 let count = 0;
+let timeStorage = 0;
 const fullCircle = 2 * Math.PI;
 /* listeners for the buttons to pause/resume the timer*/
 
@@ -183,7 +171,7 @@ let timer = (count) => {
     console.log(timeInSeconds());
     /* when the pause button is pressed, the count is stored and the interval stops until the resume is clicked*/
     document.getElementById("pausebutton").addEventListener("click", () => {
-      /* i'm learnt there is no need to initialise the variable */
+      /* i've learnt there is no need to initialise the variable */
       timeStorage = count;
       clearInterval(timeInterval);
     });
