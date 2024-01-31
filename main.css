@@ -175,6 +175,11 @@ body {
   border-bottom: none;
 }
 
+@media screen and (max-width: 500px) {
+  .settingpanel {
+    width: 22rem;
+  }
+}
 .selectors {
   display: flex;
   flex-direction: row;
