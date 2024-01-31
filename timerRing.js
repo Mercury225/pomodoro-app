@@ -1,4 +1,14 @@
-import { times, colors } from "./settings.js";
+import {
+  times,
+  colors,
+  getPomodoro,
+  getShortBreak,
+  getLongBreak,
+  getStartButton,
+  getResumeButton,
+  getPauseButton,
+  chosenColor,
+} from "./settings.js";
 
 const dimensions = {
   width: 1000,
@@ -24,7 +34,7 @@ const redrawCircle = (count) => {
   // dimensions for the canvas and circle
   const canvas = document.getElementById("timerRing");
   const context = canvas.getContext("2d");
-  context.strokeStyle = colors.red;
+  context.strokeStyle = colors.selected_color;
   context.lineWidth = "30";
   context.lineCap = "round";
 
@@ -107,24 +117,36 @@ let timeStorage = 0;
 const fullCircle = 2 * Math.PI;
 /* listeners for the buttons to pause/resume the timer*/
 
-const getPomodoro = document.getElementsByClassName("pomodoro")[0];
-const getShortBreak = document.getElementsByClassName("shortbreak")[0];
-const getLongBreak = document.getElementsByClassName("longbreak")[0];
+// const getPomodoro = document.getElementsByClassName("pomodoro")[0],
+//   getShortBreak = document.getElementsByClassName("shortbreak")[0],
+//   getLongBreak = document.getElementsByClassName("longbreak")[0];
 
 getLongBreak.addEventListener("click", () => {
   getPomodoro.classList.remove("selected");
   getShortBreak.classList.remove("selected");
   getLongBreak.classList.add("selected");
+  getShortBreak.style.backgroundColor = "transparent";
+  getLongBreak.style.backgroundColor = "transparent";
+  document.getElementsByClassName("selected")[0].style.backgroundColor =
+    chosenColor;
 });
 getPomodoro.addEventListener("click", () => {
   getPomodoro.classList.add("selected");
   getShortBreak.classList.remove("selected");
   getLongBreak.classList.remove("selected");
+  getShortBreak.style.backgroundColor = "transparent";
+  getLongBreak.style.backgroundColor = "transparent";
+  document.getElementsByClassName("selected")[0].style.backgroundColor =
+    chosenColor;
 });
 getShortBreak.addEventListener("click", () => {
   getPomodoro.classList.remove("selected");
   getShortBreak.classList.add("selected");
   getLongBreak.classList.remove("selected");
+  getPomodoro.style.backgroundColor = "transparent";
+  getLongBreak.style.backgroundColor = "transparent";
+  document.getElementsByClassName("selected")[0].style.backgroundColor =
+    chosenColor;
 });
 document.getElementById("resumebutton").addEventListener("click", () => {
   /* runs the timer function again with the saved timeStorage */
@@ -133,9 +155,9 @@ document.getElementById("resumebutton").addEventListener("click", () => {
 });
 
 /* button handler, getting all the buttons */
-const getStartButton = document.getElementById("startbutton");
-const getPauseButton = document.getElementById("pausebutton");
-const getResumeButton = document.getElementById("resumebutton");
+// const getStartButton = document.getElementById("startbutton"),
+//  getPauseButton = document.getElementById("pausebutton"),
+//  getResumeButton = document.getElementById("resumebutton");
 
 /* listener for the start button */
 
@@ -168,7 +190,7 @@ getResumeButton.addEventListener("click", () => {
 let timer = (count) => {
   let timeInterval = setInterval(function () {
     /* once it finishes, the interval stops */
-    console.log(timeInSeconds());
+
     /* when the pause button is pressed, the count is stored and the interval stops until the resume is clicked*/
     document.getElementById("pausebutton").addEventListener("click", () => {
       /* i've learnt there is no need to initialise the variable */

@@ -87,7 +87,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem 0;
   box-shadow: -0.8rem -0.8rem 2rem 0.01rem rgba(215, 224, 255, 0.0823529412);
   background: linear-gradient(to top left, rgba(215, 224, 255, 0.1215686275), rgb(22, 25, 50) 70%);
   border-radius: 50%;
@@ -95,6 +95,10 @@ body {
 
 .smallercircle {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 18rem;
   height: 18rem;
   background: rgb(22, 25, 50);
@@ -114,12 +118,6 @@ body {
 }
 
 #time {
-  position: absolute;
-  z-index: 2;
-  width: 13rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #eff1fa;
 }
 
@@ -161,10 +159,9 @@ body {
 
 .settingpanel {
   position: absolute;
+  display: none;
   background: #ffffff;
   border-radius: 2rem;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2rem;
   z-index: 4;
@@ -173,6 +170,9 @@ body {
 .settingpanel > section {
   padding: 1rem 0;
   border-bottom: 0.01rem solid #979797;
+}
+.settingpanel > section:last-of-type {
+  border-bottom: none;
 }
 
 .selectors {
@@ -226,7 +226,104 @@ body {
   justify-content: space-between;
 }
 
+.font,
+.color {
+  align-items: center;
+}
+
 #close:hover {
+  cursor: pointer;
+}
+
+.fontbuttons,
+.colorbuttons {
+  display: flex;
+  flex-direction: row;
+}
+.fontbuttons label,
+.colorbuttons label {
+  display: flex;
+  flex-direction: row;
+  background: #eff1fa;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+}
+.fontbuttons label[class=checked],
+.colorbuttons label[class=checked] {
+  background: rgb(30, 33, 63);
+  color: #eff1fa;
+}
+.fontbuttons label:hover,
+.colorbuttons label:hover {
+  background: rgb(30, 33, 63);
+  color: #eff1fa;
+  cursor: pointer;
+}
+.fontbuttons label input,
+.colorbuttons label input {
+  width: 0;
+  height: 0;
+}
+.fontbuttons label:nth-child(1),
+.colorbuttons label:nth-child(1) {
+  font-family: "Kumbh Sans", sans-serif;
+}
+.fontbuttons label:nth-child(2),
+.colorbuttons label:nth-child(2) {
+  font-family: "Roboto Slab", serif;
+}
+.fontbuttons label:nth-child(3),
+.colorbuttons label:nth-child(3) {
+  font-family: "Space Mono", monospace;
+}
+
+.colorbuttons label {
+  position: relative;
+}
+.colorbuttons label:nth-child(1) {
+  background: rgb(248, 112, 112);
+}
+.colorbuttons label:nth-child(2) {
+  background: rgb(112, 243, 248);
+}
+.colorbuttons label:nth-child(3) {
+  background: rgb(216, 129, 248);
+}
+.colorbuttons label:hover {
+  filter: brightness(1.25);
+  border: 0.1rem solid rgb(22, 25, 50);
+}
+.colorbuttons label .ticked {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-right: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.5);
+  width: 0.2rem;
+  height: 0.5rem;
+  background: transparent;
+}
+
+.apply {
+  position: absolute;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  border: none;
+  background: rgb(248, 112, 112);
+  color: #ffffff;
+  left: 50%;
+  top: 95%;
+  transform: translate(-50%);
+}
+.apply:hover {
+  background: hsl(0, 91%, 81%);
+  color: rgb(30, 33, 63);
   cursor: pointer;
 }
 
@@ -244,7 +341,7 @@ body {
 }
 
 .heading-1 {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 7.5rem;
 }
 
